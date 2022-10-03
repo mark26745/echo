@@ -11,5 +11,6 @@ async def base():
 # Dummy route to test callbacks
 @app.post("/dump")
 async def dump(dump = Body()):
+    print(dump)
     return dump
 
