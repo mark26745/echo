@@ -2,6 +2,8 @@ from sqlmodel import SQLModel, create_engine, Session, select
 from fastapi import FastAPI,Body,HTTPException
 from dotenv import load_dotenv
 from time import tzset
+from datetime import datetime
+from pytz import timezone
 from os import getenv
 from models import *
 
@@ -27,7 +29,8 @@ async def dump(dump : SensorDataBase = Body()):
                 Temperature = dump.Temperature,
                 RelativeTurbidity = dump.RelativeTurbidity,
                 TotalDissolvedSolids = dump.TotalDissolvedSolids,
-                PH = dump.PH
+                PH = dump.PH,
+                time = datetime.now(timezone('Africa/Nairobi'))
                 ))
         session.add(newSensorData)
         session.commit()

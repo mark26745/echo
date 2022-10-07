@@ -1,7 +1,7 @@
 from typing import Optional
 from sqlmodel import Field,SQLModel
 from datetime import datetime
-from pytz import timezone
+
 
 # Base classes
 class SensorDataBase(SQLModel):
@@ -17,7 +17,7 @@ class SensorData(SensorDataBase,table=True):
 
 # IO
 class SensorDataWrite(SensorDataBase):
-    time: datetime = datetime.now(timezone('Africa/Nairobi'))
+    pass
 
 class SensorDataRead(SensorDataBase):
     Temperature: float
