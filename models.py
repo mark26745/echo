@@ -20,8 +20,4 @@ class SensorDataWrite(SensorDataBase):
     pass
 
 class SensorDataRead(SensorDataBase):
-    Temperature: float
-    RelativeTurbidity: float 
-    TotalDissolvedSolids: float 
-    PH: float
-    time: datetime
+   pass
