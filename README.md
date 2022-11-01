@@ -1,2 +1,2 @@
-# Echo API
+# Echo
 Gives back dump
