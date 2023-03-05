@@ -1,6 +1,6 @@
 use actix_web::{get, post,App, HttpResponse, HttpServer, Responder, middleware::Logger};
 
-#[get("/")]
+#[get("/health")]
 async fn health() -> impl Responder {
     HttpResponse::Ok()
 }
