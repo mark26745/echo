@@ -5,7 +5,7 @@ async fn health() -> impl Responder {
     HttpResponse::Ok()
 }
 
-#[post("/dump")]
+#[post("/")]
 async fn dump(req_body: String) -> impl Responder {
     HttpResponse::Ok().body(req_body)
 }
